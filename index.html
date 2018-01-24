@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Hello World</title>
+    <script src="lib/react/react.development.js"></script>
+    <script src="lib/react/react-dom.development.js"></script>
+    <script src="lib/babel/babel.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="resume.css">
+</head>
+
+<body style="margin: 0; padding: 0;">
+    <div id="root"></div>
+
+    <script type="text/babel">
+
+const About = ({ about }) => {
+    return (
+        <div className="about section">
+            <div className="name">{about.firstName} {about.middleInit} {about.lastName}</div>
+            <hr />
+            <ul>
+                <li>{about.location.city}, {about.location.state}</li>
+                <li>{about.phone}</li>
+                <li>{about.email}</li>
+                <li><a href={about.website.url}>{about.website.title}</a></li>
+            </ul>
+        </div>
+    )
+}
+
+
+const SkillGroup = ({ group }) => {
+    return (
+        <div>
+            <div className="title">{group.title}</div>
+            <ul className="items">
+            {group.list.map(skill => {
+                return (
+                    <li className="item">{skill}</li>
+                )
+            })}
+            </ul>
+        </div>
+    )
+}
+
+const Skills = ({ skills }) => {
+    return (
+        <div className="skills section">
+            <h2>Core Competencies</h2>
+            <hr />
+            {skills.map(group => {
+                return (
+                    <SkillGroup group={group} />
+                )
+            })}
+        </div>
+    )
+}
+
+
+
+const Employment = ({ employment }) => {
+    return (
+        <div>
+        </div>
+    )
+}
+
+const Education = ({ education }) => {
+    return (
+        <div>
+        </div>
+    )
+}
+
+const Activities = ({ activities }) => {
+    return (
+        <div>
+        </div>
+    )
+}
+
+const Resume = ({ resume }) => {
+    return (
+        <div className="resume">
+            <About about={resume.about} />
+            <Skills skills={resume.skills} />
+            <Employment employment={resume.employment} />
+            <Education education={resume.education} />
+            <Activities activities={resume.activities} />
+        </div>
+    )
+}
+
+class ResumeContainer extends React.Component {
+
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            resume: null
+        }
+    }
+
+    componentWillMount() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = () => {
+            if (xhttp.readyState == 4 && xhttp.status == 200) {
+                console.log(xhttp.responseText);
+                this.setState({
+                    resume: JSON.parse(xhttp.responseText)
+                })
+            }
+        };
+        xhttp.open("GET", "resume.json", true);
+        xhttp.send();
+    }
+
+    render() {
+        return (
+            this.state.resume && <Resume resume={this.state.resume} />
+        )
+    }
+}
+
+     ReactDOM.render(
+        <ResumeContainer />,
+        document.getElementById('root')
+      );
+
+    </script>
+</body>
+
+</html>
