@@ -33,12 +33,12 @@ const About = ({ about }) => {
 
 const SkillGroup = ({ group }) => {
     return (
-        <div>
+        <div className="hover">
             <div className="title">{group.title}</div>
-            <ul className="items">
-            {group.list.map(skill => {
+            <ul className="items clearfix">
+            {group.list.map((skill, index) => {
                 return (
-                    <li className="item">{skill}</li>
+                    <li key={group.title + ' list ' + index} className="item float-left">{skill}</li>
                 )
             })}
             </ul>
@@ -51,20 +51,43 @@ const Skills = ({ skills }) => {
         <div className="skills section">
             <h2>Core Competencies</h2>
             <hr />
-            {skills.map(group => {
+            {skills.map((group, index) => {
                 return (
-                    <SkillGroup group={group} />
+                    <SkillGroup key={'skillgroup' + index} group={group} />
                 )
             })}
         </div>
     )
 }
 
-
+const Job = ({ job }) => {
+    return (
+        <div className="hover">
+           <div className="full-width clearfix">
+                <span className="title fload-left">{job.title}</span>
+                <span className="float-right">{job.from} - {job.to}</span>
+           </div>
+           <div>{job.employer.name}</div>
+           <div>{job.summary}</div>
+           <ul>
+           {job.highlights.map((highlight, index) => {
+               return (<li key={job.title + ' highlight ' + index}>{highlight}</li>)
+           })}
+           </ul>
+        </div>
+    )
+}
 
 const Employment = ({ employment }) => {
     return (
-        <div>
+        <div className="employment section">
+            <h2>Employment</h2>
+            <hr />
+            {employment.map(job => {
+                return (
+                    <Job key={job.title} job={job} />
+                )
+            })}
         </div>
     )
 }

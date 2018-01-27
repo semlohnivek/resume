@@ -1,11 +1,19 @@
 .resume {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, 'Arial Narrow', Arial, sans-serif;
     padding-top: 30px;
-    width: 60%;
+    /* width: 60%; */
 }
 
 .resume .section {
     padding: 10px;
+}
+
+.resume .section:nth-child(odd) {
+    background-color: white;
+}
+
+.resume .section:nth-child(even) {
+    background-color: #f9f9f9;
 }
 
 .resume .about {
@@ -21,18 +29,38 @@
     margin-top: 40px;
 }
 
-.resume .skills .title {
+.resume .title {
     font-size: 1.1rem;
 }
 
-.resume .skills .items:after {
+.resume .clearfix {
     content: "";
     display: table;
     clear: both;
 }
 
 .resume .skills .items .item {
-    float: left;
     margin-left: 30px;
 }
 
+.resume .float-left {
+    float: left;
+}
+
+.resume .float-right {
+    float: right;
+}
+
+.resume .full-width {
+    width: 100%;
+}
+
+.resume .italic {
+    font-style: italic;
+}
+
+.resume .hover:hover {
+    background-color: maroon;
+    color: white;
+    padding: 5px;
+}
