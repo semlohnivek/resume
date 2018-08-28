@@ -1,14 +1,15 @@
 
-
 .resume {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, 'Arial Narrow', Arial, sans-serif;
-    padding-top: 30px;
     padding-bottom: 30px;
     background-color: white;
-    /* padding-left: 300px;
-    padding-right: 300px; */
     color: #292b2c;
+    font-size: 1.2em;
     /* border: 1px solid black; */
+}
+
+.resume li {
+    /* white-space: nowrap; */
 }
 
 .resume .section {
@@ -24,13 +25,22 @@
     /* background-color: #f9f9f9; */
 }
 
-.resume .about {
+.resume .contact {
     text-align: left;
 }
 
-.resume .about .name {
-    font-size: 2rem;
-    font-weight: bold;
+.resume .contact li {
+    display: block;
+}
+
+.resume .contact div:nth-child(odd) {
+    font-size: .9em;
+    color: lightslategray;
+}
+
+.resume .contact div:nth-child(even) {
+    font-size: 1.1em;
+    margin-bottom: 10px;
 }
 
 .resume .skills {
@@ -77,7 +87,57 @@
     border-radius: 10px;    
 }
 
-.resume .hover:hover {
-    /* background-color: #563d7c;
-    color: white; */
+/* .resume .hover:hover {
+    background-color: lightslategray;
+    color: white;
+} */
+
+.resume .header {
+    background-color: lightslategray;
+    color: white;
+    width: 100%;
+    height: 100px;
+    padding-top: 15px;
+}
+
+.resume .header .name {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-left: 10px;
+    top: 25px;
+}
+
+.resume .header .header-title {
+    color: lightblue;
+    font-size: 1.5rem;
+}
+
+.resume .content {
+    width: 100%;
+    background-color: #e6e6e6;
+}
+
+.resume .m-10 {
+    margin: 10px;
+}
+
+.resume .left {
+    width: 25%;
+    height: 100%;
+    background-color: #e6e6e6;
+}
+
+.resume .right {
+    width: 75%;
+    background-color: #fff;
+    overflow-y: auto;
+}
+
+@media screen and (max-width: 1050px) {
+  .resume .left {
+     width: 100%;
+  }
+    .resume .right {
+        width: 100%;
+    }
 }

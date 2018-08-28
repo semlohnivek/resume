@@ -3,11 +3,12 @@
 
 <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kevin Holmes Résumé</title>
     <script src="lib/react/react.development.js"></script>
     <script src="lib/react/react-dom.development.js"></script>
     <script src="lib/babel/babel.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="resume.css">
+    <link rel="stylesheet" type="text/css" href="resume2.css">
 </head>
 
 <body style="margin: 0; padding: 0;">
@@ -17,12 +18,14 @@
 
 const About = ({ about }) => {
     return (
-        <div className="about section">
-            <div className="name">{about.firstName} {about.middleInit} {about.lastName}</div>
-            <hr />
+        <div className="contact section">
+                <div>Phone</div>
                 <div>{about.phone}</div>
+                <div>Email</div>
                 <div>{about.email}</div>
+                <div>Website</div>
                 <div><a href={about.website.url} target="_blank">{about.website.title}</a></div>
+                <div>Github</div>
                 <div><a href={about.github.url} target="_blank">{about.github.title}</a></div>
         </div>
     )
@@ -47,7 +50,7 @@ const SkillGroup = ({ group }) => {
 const Skills = ({ skills }) => {
     return (
         <div className="skills section">
-            <h2>Core Competencies</h2>
+            <h2>Skills</h2>
             <hr />
             {skills.map((group, index) => {
                 return (
@@ -79,7 +82,7 @@ const Job = ({ job }) => {
 const Employment = ({ employment }) => {
     return (
         <div className="employment section">
-            <h2>Employment</h2>
+            <h2>Experience</h2>
             <hr />
             {employment.map(job => {
                 return (
@@ -127,14 +130,36 @@ const Activities = ({ activities }) => {
     )
 }
 
+const Header = ({ about }) => {
+    return (
+        <div className="header">
+            <div className="name">
+                <div>{about.firstName} {about.middleInit} {about.lastName}</div>
+                <div className="header-title">{about.title}</div>
+            </div>
+        </div>        
+    )
+}
+
 const Resume = ({ resume }) => {
     return (
         <div className="resume">
-            <About about={resume.about} />
-            <Skills skills={resume.skills} />
-            <Employment employment={resume.employment} />
-            <Education education={resume.education} />
-            <Activities activities={resume.activities} />
+        <Header about={resume.about} />
+        <div className="content clearfix">
+            <div className="left float-left">
+                <div className="m-10">
+                    <About about={resume.about} />
+                </div>
+            </div>
+            <div className="right float-left">
+                <div className="m-10">
+                    <Skills skills={resume.skills} />
+                    <Employment employment={resume.employment} />
+                    <Education education={resume.education} />
+                    <Activities activities={resume.activities} />
+                </div>
+            </div>
+        </div>
         </div>
     )
 }

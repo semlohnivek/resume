@@ -4,7 +4,8 @@
         "lastName": "Holmes",
         "middleInit": "D.",
 		"phone": "+1 970.481.0379",
-        "email": "semlohnivek@hotmail.com",
+		"email": "semlohnivek@hotmail.com",
+		"title": "Web & Automation Developer",
         "location": {
             "city": "Highlands Ranch",
             "state": "CO"
@@ -12,6 +13,10 @@
 		"website": {
 			"url": "http://www.techmeholmes.com",
 			"title": "www.techmeholmes.com"
+		},
+		"github": {
+			"url": "https://www.github.com/semlohnivek",
+			"title": "www.github.com/semlohnivek"
 		}
 	},
 	"skills": [
