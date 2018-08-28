@@ -1,15 +1,15 @@
 {
 	"about": {
 		"firstName": "Kevin",
-        "lastName": "Holmes",
-        "middleInit": "D.",
+		"lastName": "Holmes",
+		"middleInit": "D.",
 		"phone": "+1 970.481.0379",
 		"email": "semlohnivek@hotmail.com",
 		"title": "Web & Automation Developer",
-        "location": {
-            "city": "Highlands Ranch",
-            "state": "CO"
-        },
+		"location": {
+			"city": "Highlands Ranch",
+			"state": "CO"
+		},
 		"website": {
 			"url": "http://www.techmeholmes.com",
 			"title": "www.techmeholmes.com"
@@ -20,26 +20,44 @@
 		}
 	},
 	"skills": [
-	    {
-	   	  "title": "Web Technologies",
-	   	  "list": [ "React", "Angular", "Node", "Bootstrap", "HTML5", "CSS3", "Sass", "RESTful API (development & consumption)" ]
-	   	},
-	    {
-	   	  "title": "Coding Languages",
-	   	  "list": [ "JavaScript", "C#", "Perl 5", "Java" ]
-	   	},
-	    {
-	   	  "title": "Databases",
-	   	  "list": ["MySQL", "mongoDB", "MS SQL Server" ]
-	   	},
-	    {
-	   	  "title": "Web Servers",
-	   	  "list": ["IIS", "Apache", "Express"]
-	   	},
-	    {
-	   	  "title": "Spoken Languages",
-	   	  "list": [ "English (fluent)", "Spanish (proficient)", "Russian (basic)" ]
-	   	}	   		   		   	
+		{
+			"title": "Web Technologies",
+			"list": [
+				"React",
+				"Angular",
+				"Node",
+				"Bootstrap",
+				"HTML5",
+				"CSS3",
+				"Web Sockets (Socket.io)",
+				"RESTful API (development & consumption)"
+			]
+		},
+		{
+			"title": "Coding Languages",
+			"list": [
+				"JavaScript",
+				"C#",
+				"Perl 5",
+				"Java"
+			]
+		},
+		{
+			"title": "Databases",
+			"list": [
+				"MySQL",
+				"mongoDB",
+				"MS SQL Server"
+			]
+		},
+		{
+			"title": "Automation",
+			"list": [
+				"Ansible",
+				"AWX",
+				"Jenkins"
+			]
+		}
 	],
 	"employment": [
 		{
@@ -51,12 +69,13 @@
 			},
 			"from": "July 2017",
 			"to": "Present",
-			"summary": "Automation developemnt for Enterprise Architecture team, largely focused on push-button virtual machine and container deployment.",
+			"summary": "Developer for the Enterprise Architecture team, largely focused on infrastructure automation.",
 			"highlights": [
-				"Lead front-end developer for a React based UI",
-				"Helped build an authentication and authorization server with Node, Express, and LDAP modules."
+				"Lead developer and co-architect of a suite of tools designed to reduce lag time during critical Incident management.  The main technologies involved inclue Mattermost (persistent chat application) and Ansible/AWX.",
+				"Built a custom LDAP-based authentication service using Node, Express, and Jason Web Tokens",
+				"Front-end developer for a React based UI which provides push-button deployment of Virtual Machines and container applications."
 			]
-		},		
+		},
 		{
 			"title": "Sr. Web Engineer",
 			"employer": {
@@ -104,24 +123,24 @@
 				"Specialized in system monitoring and data gathering to provide usage metrics for servers and applications.",
 				"Automated solutions allowed for over 50% of all help desk tickets to be completed automatically without human intervention."
 			]
-		}				
+		}
 	],
 	"education": [
 		{
 			"name": "Colorado State University",
 			"location": "Ft. Collins, CO",
 			"degrees": [
-			   {
-				  "type": "Bachelor of Arts",
-				  "major": "Anthropology, Spanish minor"
-			   },
-               {
-				  "type": "Master of Science",
-				  "major": "Business Administration, Computer Information Systems"
-			   }			   
+				{
+					"type": "Bachelor of Arts",
+					"major": "Anthropology, Spanish minor"
+				},
+				{
+					"type": "Master of Science",
+					"major": "Business Administration, Computer Information Systems"
+				}
 			]
-		}			
-	],	
+		}
+	],
 	"activities": [
 		{
 			"title": "Volunteer Mentor",

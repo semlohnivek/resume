@@ -4,7 +4,7 @@
     padding-bottom: 30px;
     background-color: white;
     color: #292b2c;
-    font-size: 1.2em;
+    font-size: 0.7em;
     /* border: 1px solid black; */
 }
 
@@ -48,7 +48,7 @@
 }
 
 .resume .title {
-    font-size: 1.1rem;
+    font-size: 1.1em;
     font-weight: bold;
 }
 
@@ -101,7 +101,7 @@
 }
 
 .resume .header .name {
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: bold;
     margin-left: 10px;
     top: 25px;
