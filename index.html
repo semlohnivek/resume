@@ -15,165 +15,184 @@
 
     <script type="text/babel">
 
-const About = ({ about }) => {
-    return (
-        <div className="about section">
-            <div className="name">{about.firstName} {about.middleInit} {about.lastName}</div>
-            <hr />
-                <div>{about.phone}</div>
-                <div>{about.email}</div>
-                <div><a href={about.website.url} target="_blank">{about.website.title}</a></div>
-                <div><a href={about.github.url} target="_blank">{about.github.title}</a></div>
-        </div>
-    )
-}
-
-
-const SkillGroup = ({ group }) => {
-    return (
-        <div className="hover group">
-            <div className="title">{group.title}</div>
-            <ul className="items clearfix">
-            {group.list.map((skill, index) => {
-                return (
-                    <li key={group.title + ' list ' + index} className="item float-left">{skill}</li>
-                )
-            })}
-            </ul>
-        </div>
-    )
-}
-
-const Skills = ({ skills }) => {
-    return (
-        <div className="skills section">
-            <h2>Core Competencies</h2>
-            <hr />
-            {skills.map((group, index) => {
-                return (
-                    <SkillGroup key={'skillgroup' + index} group={group} />
-                )
-            })}
-        </div>
-    )
-}
-
-const Job = ({ job }) => {
-    return (
-        <div className="hover">
-           <div className="full-width clearfix">
-                <span className="title fload-left">{job.title}</span>
-                <span className="float-right">{job.from} - {job.to}</span>
-           </div>
-           <div className="italic">{job.employer.name}</div>
-           <div>{job.summary}</div>
-           <ul>
-           {job.highlights.map((highlight, index) => {
-               return (<li key={job.title + ' highlight ' + index}>{highlight}</li>)
-           })}
-           </ul>
-        </div>
-    )
-}
-
-const Employment = ({ employment }) => {
-    return (
-        <div className="employment section">
-            <h2>Employment</h2>
-            <hr />
-            {employment.map(job => {
-                return (
-                    <Job key={job.title} job={job} />
-                )
-            })}
-        </div>
-    )
-}
-
-const School = ({ school }) => {
-    return (
-        <div className="hover">
-            <div className="title">{school.name}</div>
-            <div className="italic">{school.location}</div>
-            {school.degrees.map(degree => {
-                return (
-                    <div>
-                        <div><span className="">{degree.type}</span> - <span>{degree.major}</span></div>
-                    </div>
-                )
-            })}        
-        </div>
-    )
-}
-
-const Education = ({ education }) => {
-    return (
-        <div className="education section">
-            <h2>Education</h2>
-            <hr />
-            {education.map(school => {
-                return (
-                    <School key={school.name} school={school} />
-                )
-            })}
-        </div>
-    )
-}
-
-const Activities = ({ activities }) => {
-    return (
-        <div>
-        </div>
-    )
-}
-
-const Resume = ({ resume }) => {
-    return (
-        <div className="resume">
-            <About about={resume.about} />
-            <Skills skills={resume.skills} />
-            <Employment employment={resume.employment} />
-            <Education education={resume.education} />
-            <Activities activities={resume.activities} />
-        </div>
-    )
-}
-
-class ResumeContainer extends React.Component {
-
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            resume: null
+        const About = ({ about }) => {
+            return (
+                <div className="about section">
+                    <div className="name">{about.firstName} {about.middleInit} {about.lastName}</div>
+                    <div className="title italic">{about.title}</div>
+                    <div>{about.location.city}, {about.location.state}</div>
+                    <div>{about.email}</div>
+                    <div>{about.phone}</div>
+                    <div><a href={about.github.url} target="_blank">{about.github.title}</a></div>
+                </div>
+            )
         }
-    }
 
-    componentWillMount() {
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = () => {
-            if (xhttp.readyState == 4 && xhttp.status == 200) {
-                console.log(xhttp.responseText);
-                this.setState({
-                    resume: JSON.parse(xhttp.responseText)
-                })
+
+        const SkillGroup = ({ group }) => {
+            return (
+                <tr className="hover group">
+                    <td className="skill-title">{group.title}:</td>
+                    <td>
+                        {group.list.join(", ")}
+                    </td>
+
+                </tr>
+            )
+        }
+
+        const Skills = ({ skills }) => {
+            return (
+                <div className="skills section">
+                    <div className="section-header">Skills</div>
+                    <hr />
+                    <table>
+                        <tbody>
+                            {skills.map((group, index) => {
+                                return (
+                                    <SkillGroup key={'skillgroup' + index} group={group} />
+                                )
+                            })}
+                        </tbody>
+                    </table>
+                </div>
+            )
+        }
+
+        const Job = ({ job }) => {
+            return (
+                <div className="hover">
+
+                    <div className="job-title">{job.title}</div>
+                    <div>{job.from} - {job.to}</div>
+
+                    <div className="italic">{job.employer.name}</div>
+                    <div>{job.summary}</div>
+                    <ul>
+                        {job.highlights.map((highlight, index) => {
+                            return (<li key={job.title + ' highlight ' + index}>{highlight}</li>)
+                        })}
+                    </ul>
+                </div>
+            )
+        }
+
+        const Employment = ({ employment }) => {
+            return (
+                <div className="employment section">
+                    <div className="section-header">Work History</div>
+                    <hr />
+                    {employment.map(job => {
+                        return (
+                            <Job key={job.title} job={job} />
+                        )
+                    })}
+                </div>
+            )
+        }
+
+        const School = ({ school }) => {
+            return (
+                <div className="hover">
+                    <div className="title">{school.name}</div>
+                    <div className="italic">{school.location}</div>
+                    {school.degrees.map(degree => {
+                        return (
+                            <div>
+                                <div><span className="">{degree.type}</span> - <span>{degree.major}</span></div>
+                            </div>
+                        )
+                    })}
+                </div>
+            )
+        }
+
+        const Education = ({ education }) => {
+            return (
+                <div className="education section">
+                    <div className="section-header">Education</div>
+                    <hr />
+                    {education.map(school => {
+                        return (
+                            <School key={school.name} school={school} />
+                        )
+                    })}
+                </div>
+            )
+        }
+
+        const Cert = ({ cert }) => {
+            return (
+                <div className="hover">
+                    <div className="title">{cert.name}</div>
+                    <div className="">{cert.date}</div>                    
+                </div>
+            )
+        }
+
+        const Certifications = ({ certifications }) => {
+            return (
+                <div className="certifications section">
+                    <div className="section-header">Certifications</div>
+                    <hr />
+                    {certifications.map(cert => {
+                        return (
+                            <Cert key={cert.name} cert={cert} />
+                        )
+                    })}
+                </div>
+            )
+        }        
+
+
+
+        const Resume = ({ resume }) => {
+            return (
+                <div className="resume">
+                    <About about={resume.about} />
+                    <Skills skills={resume.skills} />
+                    <Employment employment={resume.employment} />
+                    <Education education={resume.education} />
+                    <Certifications certifications={resume.certifications} />
+                </div>
+            )
+        }
+
+        class ResumeContainer extends React.Component {
+
+            constructor(props) {
+                super(props);
+
+                this.state = {
+                    resume: null
+                }
             }
-        };
-        xhttp.open("GET", "resume.json", true);
-        xhttp.send();
-    }
 
-    render() {
-        return (
-            this.state.resume && <Resume resume={this.state.resume} />
-        )
-    }
-}
+            componentWillMount() {
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = () => {
+                    if (xhttp.readyState == 4 && xhttp.status == 200) {
+                        console.log(xhttp.responseText);
+                        this.setState({
+                            resume: JSON.parse(xhttp.responseText)
+                        })
+                    }
+                };
+                xhttp.open("GET", "resume.json", true);
+                xhttp.send();
+            }
 
-     ReactDOM.render(
-        <ResumeContainer />,
-        document.getElementById('root')
-      );
+            render() {
+                return (
+                    this.state.resume && <Resume resume={this.state.resume} />
+                )
+            }
+        }
+
+        ReactDOM.render(
+            <ResumeContainer />,
+            document.getElementById('root')
+        );
 
     </script>
 </body>

@@ -3,16 +3,16 @@
 		"firstName": "Kevin",
 		"lastName": "Holmes",
 		"middleInit": "D.",
-		"phone": "+1 970.481.0379",
+		"phone": "970.481.0379",
 		"email": "semlohnivek@hotmail.com",
-		"title": "Web & Automation Developer",
+		"title": "Full-Stack JavaScript & Go Developer",
 		"location": {
-			"city": "Highlands Ranch",
+			"city": "Franktown",
 			"state": "CO"
 		},
 		"website": {
-			"url": "http://www.techmeholmes.com",
-			"title": "www.techmeholmes.com"
+			"url": "http://www.kevinholmes.work",
+			"title": "www.kevinholmes.work"
 		},
 		"github": {
 			"url": "https://www.github.com/semlohnivek",
@@ -21,47 +21,63 @@
 	},
 	"skills": [
 		{
-			"title": "Web Technologies",
-			"list": [
-				"React",
-				"Angular",
-				"Node",
-				"Bootstrap",
-				"HTML5",
-				"CSS3",
-				"Web Sockets (Socket.io)",
-				"RESTful API (development & consumption)"
-			]
-		},
-		{
-			"title": "Coding Languages",
+			"title": "Languages",
 			"list": [
 				"JavaScript",
-				"C#",
+				"Go / Golang",
 				"Perl 5",
-				"Java"
+				"Powershell",
+				"C#"
 			]
 		},
 		{
-			"title": "Databases",
+			"title": "Front-End",
 			"list": [
+				"React",
+				"Vue.js",
+				"HtML",
+				"CSS",
+				"Bootstrap",
+				"Quasar",
+				"Material UI",
+				"Highcharts"
+			]
+		},
+		{
+			"title": "Back-End",
+			"list": [
+				"Node.js",
+				"RESt API",
+				"GraphQL",
+				"Express",
+				"Gin",
+				"Apache",
 				"MySQL",
-				"mongoDB",
-				"MS SQL Server"
+				"SQL Server"
 			]
 		},
 		{
-			"title": "Automation",
+			"title": "tools",
 			"list": [
-				"Ansible",
-				"AWX",
-				"Jenkins"
+				"Git",
+				"Jira",
+				"Visual Studio Code",
+				"Docker",
+				"SSL/tLS",
+				"mongoDB",
+				"SQL Server",
+				"Postman",
+				"Kore.ai",
+				"AWS - CLI",
+				"Javascript SDK",
+				"Lambda",
+				"API Gateway"
 			]
 		}
 	],
 	"employment": [
 		{
-			"title": "Technology Engineer",
+			"title": "Principal Software Engineer",
 			"employer": {
 				"name": "PNC Financial Services Group",
 				"city": "Pittsburgh",
@@ -69,61 +85,70 @@
 			},
 			"from": "July 2017",
 			"to": "Present",
-			"summary": "Developer for the Enterprise Architecture team, largely focused on infrastructure automation.",
+			"summary": "Full-stack developer for the Site Reliability Engineering (SRE) team, largely focused on infrastructure automation. Primary tech stack: React,Vue.js, Node.js, Go/Golang, MySQL and SQL Server",
 			"highlights": [
-				"Lead developer and co-architect of a suite of tools designed to reduce lag time during critical Incident management.  The main technologies involved inclue Mattermost (persistent chat application) and Ansible/AWX.",
-				"Built a custom LDAP-based authentication service using Node, Express, and Jason Web Tokens",
-				"Front-end developer for a React based UI which provides push-button deployment of Virtual Machines and container applications."
+				"Co-developed a push-button virtual machine deployment application (like AWS EC2) built with React, Express, Go,Ansible, and MySQL",
+				"Lead the API development and co-developed the UI for a centralized logging application.the API included RESt and GraphQL endpoints and the UI was built",
+				"with Vue.js (Quasar framework) with a MySQL SQL database",
+				"Wrote the authentication and authorization code libraries for our team using LDAP binding and group membership queries",
+				"Did a three month stint of Ansible playbook writing, which included in-person Red Hat training",
+				"Maintained a chatbot API built with Go and gRPC for streaming and real-time updates",
+				"Performed etxensive testing with the use of Postman, Selenium WebDriver, Selenium Grid, and Jest",
+				"Requested certificates and implemented SSL/tLS for all of the applications within the SRE application library",
+				"Increased use of Amazon Web Services (AWS) including Lambda functions, Javascript SDK,API Gateway, and DynamoDB",
+				"Performed both manual deployments as well as automated deployments (CI/CD) using Git and Jenkins",
+				"Agile methodology used for all development projects, which included daily stand-ups, use of Jira, and Git integration",
+				"Participated in regular pull requests, code reviews, and provided guidance to junior developers to foster a collaborative team environment"
 			]
 		},
 		{
-			"title": "Sr. Web Engineer",
+			"title": "Web Developer",
 			"employer": {
 				"name": "Visa Inc.",
 				"city": "Highlands Ranch",
 				"state": "CO"
 			},
-			"from": "August 2015",
-			"to": "February 2017",
-			"summary": "Mix of full-stack and strict front-end web development using AngularJS, Ruby on Rails, and MySQL for three different medium-scale web applications.",
+			"from": "March 2014",
+			"to": "June 2017",
+			"summary": "Initially part of a large development team for Visa's Debit Processing Services (DPS). In February, 2016 moved to a small web development team tasked with overhauling an internal ticketing system.",
 			"highlights": [
-				"Heavy use of open source JavaScript libraries including: AngularJS, jQuery, Angular UI, UI Router, and more.",
-				"Build responsive and consistent UI layouts using Bootstrap and Bootstrap-based themes such as SmartAdmin and Inspinia.",
-				"Develop RESTful API using Ruby on Rails, consumed on the front-end [mostly] using AngularJS Resource objects.",
-				"Agile development model using Git, Stash/Bitbucket, and Jira.  Most releases based on 2-3 week sprints."
+				"Wrote new features and bug-fixes for a large-scale, customer-facing web application written in C#, jQuery, and vanilla JavaScript",
+				"Integrated with an enterprise-size MS SQL Server environment. Used XML and Soap for back-end data messaging",
+				"Developed a deep understanding of HtML, CSS, web service architecture, and the DOM"
 			]
 		},
 		{
-			"title": "Contractor / Web Developer",
+			"title": "Systems Administrator",
 			"employer": {
-				"name": "Consultant Specialists Inc.",
+				"name": "Visa Inc.",
 				"city": "Highlands Ranch",
 				"state": "CO"
 			},
-			"from": "March 2014",
-			"to": "July 2015",
-			"summary": "Initially contracted with Visa Prepaid developing web services written in C# using XML payloads. Latter 10 months, moved to full-stack AngularJS, Ruby on Rails, and MySQL web application.",
+			"from": "December 2010",
+			"to": "February 2014",
+			"summary": "Worked mostly on Windows (and some Linux) system automation.",
 			"highlights": [
-				"Learned AngularJS and Ruby on Rails on the job.  Became proficient in both within a month.",
-				"Began using tools such as Git, Stash, and Jira in an Agile based development project."
+				"Included etxensive Powershell scripting and some Bash scripting",
+				"Joined a specialized, four-person team tasked with consulting internal application teams to automate their manual processes",
+				"Utilized a mix of code and UI-driven tools to build end-to-end automation solutions"
 			]
 		},
 		{
-			"title": "Sr. Systems Administrator",
+			"title": "Sr. Software Configuration Analyst",
 			"employer": {
 				"name": "Visa Inc.",
 				"city": "Highlands Ranch",
 				"state": "CO"
 			},
 			"from": "June 2004",
-			"to": "November 2012",
-			"summary": "Lead the Windows automation team for Visa’s operations department. Administered the source code repositories and defect tracking systems for Visa’s software development teams using IBM/Rational ClearCase and ClearQuest.",
+			"to": "November 2010",
+			"summary": "Administered IBM / Rational ClearCase (source code repository) and ClearQuest (defect tracking) for Visa's internal software development teams.",
 			"highlights": [
-				"Wrote server-side automation scripts using Perl, C# and Java – Some driven by the server scheduler, others driven by HPOO.",
-				"Specialized in system monitoring and data gathering to provide usage metrics for servers and applications.",
-				"Automated solutions allowed for over 50% of all help desk tickets to be completed automatically without human intervention."
+				"Quickly established a niche as one of two developers on the team",
+				"Responsible for the ClearQuest schema updates which were written in Perl",
+				"Wrote the ClearCase MultiSite scripts (in Perl) which updated and synchronized code across numerous code repositories around the world"
 			]
-		}
+		}		
 	],
 	"education": [
 		{
@@ -141,6 +166,13 @@
 			]
 		}
 	],
+	"certifications": [
+		{
+			"name": "AWS Certified Cloud Practitioner",
+			"date": "January 2023",
+			"badge": "https://www.credly.com/badges/f609364e-9991-44b7-a138-200bece9c80c"
+		}
+	],	
 	"activities": [
 		{
 			"title": "Volunteer Mentor",

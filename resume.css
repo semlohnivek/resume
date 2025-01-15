@@ -2,7 +2,7 @@
 
 .resume {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, 'Arial Narrow', Arial, sans-serif;
-    padding-top: 30px;
+    /* padding-top: 30px; */
     padding-bottom: 30px;
     background-color: white;
     /* padding-left: 300px;
@@ -12,6 +12,7 @@
 }
 
 .resume .section {
+    margin-bottom: 15px;
     /* padding: 10px; */
     /* border: 1px solid black; */
 }
@@ -29,17 +30,18 @@
 }
 
 .resume .about .name {
-    font-size: 2rem;
+    font-size: 2.1rem;
     font-weight: bold;
-}
-
-.resume .skills {
-    margin-top: 40px;
 }
 
 .resume .title {
+    font-size: 1.4rem;
+    /* font-weight: bold; */
+}
+
+.resume .skill-title {
     font-size: 1.1rem;
-    font-weight: bold;
+    font-weight: bold; 
 }
 
 .resume .clearfix {
@@ -67,6 +69,16 @@
 
 .resume .italic {
     font-style: italic;
+}
+
+.resume .section-header {
+    font-size: 1.7rem;
+    font-weight: 900;
+}
+
+.resume .job-title {
+    font-size: 1.5rem;
+    font-weight: 600;
 }
 
 .resume .hover {
